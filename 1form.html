@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        *{
+            margin:0;
+            padding:20px;
+            background-color:darkslategray;
+            color:whitesmoke;
+            line-height:0.6;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+        }
+        header h1{
+            text-align:center;
+        }
+        header p{
+            text-align:center;
+        }
+        .booking-form-container{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+        .booking-form{
+            background:whitesmoke;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px whitesmoke;
+            width: 100%;
+            max-width:450px; 
+        }
+        .booking-form label {
+            display: block;
+            font-weight: bold;
+            border-radius:5px;
+            background-color: whitesmoke;
+            color:darkslategray;
+            text-align:start;
+            width:95%;
+      }
+      .booking-form input,
+      .booking-form select,
+      .booking-form textarea {
+        width:95%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid darkslategray;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      .submit-btn {
+        display: block;
+        background-color:darkslategray;
+        color:whitesmoke;
+        font-size: 1rem;
+        padding: 10px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        text-align: center;
+        width:50%;
+        margin:auto;
+      }
+      .submit-btn:hover{
+        background-color:transparent;
+        color:darkslategray;
+      }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>Book your mountain adventure right now!!!</h1>
+        <p>Fill in your details to secure your spot for an unforgettable trip.</p>
+    </header>
+    <section class="booking-form-container">
+        <form action="#" method="post" class="booking-form">
+        <label for="text">Name:</label>
+        <input type="text" id="text" name="text" placeholder="enter your name" required/>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="enter your email" required/>
+
+        <label for="destination">Destination:</label>
+        <select id="destination"name="Destination" required>
+            <option value="select destination">Select Destination</option>
+            <option value="EchoRidge">Echo Ridge</option>
+            <option value="StormspireMountain">Stormspire Mountain</option>
+            <option value="WhisperingPeaks">Whispering Peaks</option>
+        </select>
+
+        <label for="date">travel date:</label>
+        <input type="date" id="date" name="date" required/>
+
+        <label for="size">Group Size:</label>
+        <input type="text" name="size" id="text" placeholder="enter group size" required/>
+
+        <label for="notes">Additional:</label>
+        <textarea id="notes" name="notes" placeholder="any requests or details" rows="4" required></textarea>
+
+        <button class="submit-btn">Submit Booking</button>
+    </form>
+    </section>
+</body>
+</html>
